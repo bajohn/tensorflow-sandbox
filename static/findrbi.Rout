@@ -1,0 +1,42 @@
+
+R version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> # package installed:
+> # install.packages("jsonlite")
+> #
+> # normalized random: x<-rnorm(10000)
+> 
+> library(jsonlite) #import library
+> message("we in here")
+we in here
+> 
+> png(file="batting.png")
+> data<-fromJSON("./30batting.json")
+> 
+> # ['playerID','yearID','stint','teamID','lgID','G','AB','R','H','2B','3B','HR','RBI','SB','CS','BB','SO','IBB','HBP','SH','SF','GIDP'],
+> x<-data[,12] #8 is hits
+> y<-data[,13]
+> plot(x,y)
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  2.956   0.116   3.116 

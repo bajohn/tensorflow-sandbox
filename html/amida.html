@@ -1,0 +1,30 @@
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js"  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="  crossorigin="anonymous"></script>
+
+
+
+<form id="upload" action="/api/parse" method="POST" enctype="multipart/form-data">
+
+
+<div style='font-size: 20px;'>Select file to upload:</div>
+
+<div style=>
+	<label for="fileselect">File to upload:</label>
+	<input type="file" name="amida_file" id="fileselect" />
+</div>
+
+<div style='position:relative; top: 20px;' id="submitbutton">
+	<button type="submit">Submit</button>
+</div>
+
+
+
+</form>
+
+<style>
+div
+{
+	font-family: Helvetica;
+	margin-top: 20px;
+	position:relative; 
+}
+</style>
